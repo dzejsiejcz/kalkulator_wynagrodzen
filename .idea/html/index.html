@@ -61,7 +61,7 @@
             const gross = (parseFloat(netPayout) * 1.47).toFixed(2);
             const zusBase = (gross - parseFloat(diets)).toFixed(2);
             const taxBase = (gross * 0.7).toFixed(2);
-            const bonus = (gross - parseFloat(contract) + parseFloat(sector)).toFixed(2);
+            const bonus = (gross - parseFloat(contract) - parseFloat(sector)).toFixed(2);
             document.getElementById("gross").innerHTML = gross.valueOf() + " zł";
             document.getElementById("zus-base").innerHTML = zusBase.valueOf() + " zł";
             document.getElementById("tax-base").innerHTML = taxBase.valueOf() + " zł";
