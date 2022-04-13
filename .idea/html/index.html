@@ -55,6 +55,9 @@
     </table>
     <p>*przybliżona wartość brutto</p>
     <script>
+        document.addEventListener("keypress", function (event){
+            if (event.keyCode === 13) calculator();
+        })
         function calculator() {
             const netPayout = document.getElementById("net_payout").value;
             const contract = document.getElementById("contract").value;
